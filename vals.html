@@ -74,7 +74,7 @@
             <img id="main-gif" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHU1NmszYTNjNXp0Z2ZleDNxYnJ6bnV1emg5aThrcDlhbHVhcXpnMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif" alt="Cute proposing gif">
         </div>
         
-        <h1 id="question">Will you be my Valentine? 🌹</h1>
+        <h1 id="question">Princess Nora, Will you be my Valentine? 🌹</h1>
 
         <div class="buttons">
             <button id="yesBtn">Yes</button>
@@ -103,11 +103,9 @@
         ];
 
         noBtn.addEventListener('click', () => {
-            // 1. Make the Yes button grow
             yesScale += 0.5;
             yesBtn.style.transform = `scale(${yesScale})`;
 
-            // 2. Teleport the No button to a random spot
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
             
@@ -115,19 +113,17 @@
             noBtn.style.left = `${x}px`;
             noBtn.style.top = `${y}px`;
 
-            // 3. Cycle through funny messages
             if (noClickCount < messages.length) {
                 noBtn.innerText = messages[noClickCount];
                 noClickCount++;
             } else {
-                noBtn.innerText = "Just click Yes already!";
+                noBtn.innerText = "still NO!! Just click Yes already!";
             }
         });
 
         yesBtn.addEventListener('click', () => {
-            // Celebration Phase
-            question.innerText = "Yay!!! See you on the 14th! ❤️";
-            mainGif.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHY1YmsycGZ4M25oamR4eXBqbmJ4eXBqbmJ4eXBqbmJ4eXBqbmJ4JnB0PWVufmNvbGxlY3Rpb24mY3JlYXRlZD0xNzA3MDY0MTAy/T866Ti1yDLNWA/giphy.gif"; 
+            question.innerText = "Yay!!!mmuahhhh See you on the 14th! ❤️";
+            mainGif.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHU1NmszYTNjNXp0Z2ZleDNxYnJ6bnV1emg5aThrcDlhbHVhcXpnMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif"; 
             noBtn.style.display = 'none';
             yesBtn.style.transform = 'scale(1.5)';
         });
